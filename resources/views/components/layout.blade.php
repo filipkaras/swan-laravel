@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <!-- Custom -->
     <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>

@@ -10,7 +10,7 @@ class TodoController extends Controller
     public function index()
     {
         return view('todo.index', [
-            'todos' => Todo::with('user')->where('user_id', auth()->id())->paginate(10)
+            'todos' => Todo::sortable()->filter()->with('user')->where('user_id', auth()->id())->paginate(10)
         ]);
     }
 
