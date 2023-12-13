@@ -1,64 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# **SWAN PHP Developer Test (Laravel version)**
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 👀  Popis
 
-## About Laravel
+Vytvorte jednoduchú aplikáciu pre správu úloh (to-do list). Vašou úlohou je vytvoriť backend pre túto aplikáciu s použitím čistého PHP a Laravel frameworku.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🎯  Časť 2: Laravel Framework (35% váhy)
+Naprogramujte rovnakú funkcionalitu ako v časti 1, ale tentoraz využite Laravel framework. Predpokladáme, že máte nainštalovaný Laravel a pripojený k databáze (podľa Vašej preferencie). Použite Eloquent ORM pre prácu s úlohami.
+Implementujte autentifikáciu na Laravel aplikácii, aby bolo možné mať viacerých používateľov. Každý používateľ by mal mať svoj vlastný zoznam úloh.
+Zoznam úloh bude obsahovať (okrem požiadaviek z Časti 1) nasledovné možnosti:
+    1. zoradenie úloh podla jednotlivých stĺpcov
+    2. filtrovanie zoznamu úloh podľa:
+        a. názov
+        b. dátum vytvorenia od - do
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯  Časť 3: Dodatočné úpravy (10% váhy)
+1. Optimalizujte kód a zabezpečte ho proti SQL injection a iným bezpečnostným hrozbám.
+2. Napíšte jednoduché testy pre Vašu Laravel aplikáciu. Stačí maximálne 1-2 testy, ktoré overia hlavné funkcie.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ✅  Postup Inštalácie
 
-## Learning Laravel
+1. Checkout projektu z Githubu do lokálneho adresára
+   - konfigurácia hosts súboru a vhost pre apache (záleží od lokálnej konfigurácie web servera)
+   
+2. Vytvorenie .env konfigurácie
+   - skopírovanie .env.example a nastavenie prístupov do DB
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Vytvorenie lokálnej databázy
+   - názov databázy sa musí zhodovať s konfiguráciou v bode 2
+   
+4. Migrácia databázy
+   - spustite migráciu databázy príkazom "php artisan migrate"
+  
+5. Seedovanie databázy
+   - spustite seedovanie databázy príkazom "php artisan db:seed"
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. Inštalácia composer balíčkov
+   - pred správny chod aplikácie je potrebná inštalácia composer balíčkov spustením príkazu "composer install" v adresári projektu
+  
+7. Nastavenie práv pre adresár writable
+   - pre adresár writable je potrebné nastaviť práva na 770
+   - do adresára ukladáme kompilované templaty
 
-## Laravel Sponsors
+## 📝  Požiadavky:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Aplikácia vyžaduje PHP vo verzií 8.2 a MySQL vo verzií 8 alebo MariaDB vo verzií 11.
 
-### Premium Partners
+## 💡  Technické riešenie a developer komentáre:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Aplikáciu som vyvíjal v Laravel verzií 8 použil som nasledovné balíčky:
 
-## Contributing
+## PHP
+Laravel Purity - filtrovanie nad ORM<br />
+Column Sortable - triedenie nad ORM<br />
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## HTML, CSS, JS
+Bootstrap - grid layout + základný dizajn<br />
 
-## Code of Conduct
+Po spustení aplikácie bude užívateľ presmerovaný na prihlasovaciu stránku. Po úspešnom prihlásení sa mu zobrazí zoznam jeho úloh v prehladnej tabuľke. Dáta je možné zoraďovať podľa ktoréhokoľvek stĺpca a zároveň v nich aj vyhľadávať. Užívateľ má tiež možnosť pridať novú ulohu (to-to), upraviť úlohu, prípadne ju označiť ako hotovú alebo znovu otvoriť.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🧪  Testovanie
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Testy je možné spustiť príkazom "php artisan test"
