@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <title>SWAN - Laravel version</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.51ba96d0e797.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.fac4f0bb0b36.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.dadb828914ce.png">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.684b359f3956.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.de43b17b57a3.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link href="//use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -15,9 +20,7 @@
     <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    {{ $slot }}
-</div>
+{{ $slot }}
 <!-- jQuery -->
 <script src="//code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
