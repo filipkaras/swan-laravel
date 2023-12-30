@@ -32,4 +32,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Todo::class);
     }
+
+    public function isAdmin()
+    {
+        // Just for demo purposes
+        return $this->id === 1;
+    }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -36,3 +37,5 @@ Route::post('todo', [TodoController::class, 'store'])->middleware('auth');
 Route::get('todo/{todo}/edit', [TodoController::class, 'edit'])->middleware('auth');
 Route::patch('todo/{todo}', [TodoController::class, 'update'])->middleware('auth');
 Route::delete('todo/{todo}', [TodoController::class, 'destroy'])->middleware('auth');
+
+Route::get('/admin', [DashboardController::class, 'index'])->middleware('admin');
