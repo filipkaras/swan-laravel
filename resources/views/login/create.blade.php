@@ -9,7 +9,7 @@
                                 <img src="/favicon/apple-touch-icon.51ba96d0e797.png" />
                                 <h2 class="fw-bold mb-2 text-uppercase">Sign In</h2>
                                 <p class="text-white-50 mb-4">Please enter your email and password!</p>
-                                <form method="POST" action="/login" class="mt-10">
+                                <form method="POST" action="{{ route('login') }}" class="mt-10">
                                     @csrf
                                     <div class="form-outline form-white mb-4">
                                         <label class="form-label" for="email">Email</label>
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                             <div>
-                                <p class="mb-0">Don't have an account? <a href="/register" class="text-white-50 fw-bold">Sign Up</a></p>
+                                <p class="mb-0">Don't have an account? <a href="{{ route('register') }}" class="text-white-50 fw-bold">Sign Up</a></p>
                             </div>
                         </div>
                     </div>

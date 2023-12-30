@@ -18,18 +18,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function() {
-    return redirect('/todos');
+    return redirect()->route('todos.index');
 })->middleware('auth');
 
 // Auth
 Route::middleware('guest')->group(function () {
-    Route::get('register', [RegisterController::class, 'create']);
-    Route::post('register', [RegisterController::class, 'store']);
+    Route::get('register', [RegisterController::class, 'create'])->name('register');
+    Route::post('register', [RegisterController::class, 'store'])->name('register');
     Route::get('login', [LoginController::class, 'create'])->name('login');
-    Route::post('login', [LoginController::class, 'store']);
+    Route::post('login', [LoginController::class, 'store'])->name('login');
 });
 
-Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
+Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
 
 // Todos
 Route::middleware(['auth', 'todo.own'])->group(function () {
@@ -37,4 +37,4 @@ Route::middleware(['auth', 'todo.own'])->group(function () {
 });
 
 // Admin
-Route::get('/admin', [DashboardController::class, 'index'])->middleware('admin');
+Route::get('/admin', [DashboardController::class, 'index'])->middleware('admin')->name('admin');

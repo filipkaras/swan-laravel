@@ -4,7 +4,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-6">
                     <main>
-                        <a class="btn btn-outline-secondary mb-2" href="/todos"><i class="fas fa-long-arrow-alt-left"></i> Go Back</a>
+                        <a class="btn btn-outline-secondary mb-2" href="{{ route('todos.index') }}"><i class="fas fa-long-arrow-alt-left"></i> Go Back</a>
                         <div class="card mb-4 rounded-3 shadow-sm card-form">
                             <div class="card-header py-3">
                                 <h4 class="my-0 fw-normal">{{ $todo->todo }}</h4>
