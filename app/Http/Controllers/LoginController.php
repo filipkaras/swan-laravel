@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -11,14 +12,14 @@ class LoginController extends Controller
         return view('login.create');
     }
 
-    public function store()
+    public function store(LoginRequest $request)
     {
         auth()->logout();
 
-        $attributes = request()->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required']
-        ]);
+        $attributes = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
 
         if (!auth()->attempt($attributes)) {
             throw ValidationException::withMessages([
