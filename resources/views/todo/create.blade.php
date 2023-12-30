@@ -8,7 +8,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
-                <form action="/todo" method="post" id="frm-todo" class="m-form m-form--fit m-form--label-align-right">
+                <form action="/todos" method="post" id="frm-todo" class="m-form m-form--fit m-form--label-align-right">
                     @csrf
                     <div class="m-portlet__body">
                         <div class="mb-3">

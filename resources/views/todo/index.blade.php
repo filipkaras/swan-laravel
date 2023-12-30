@@ -6,7 +6,7 @@
                 <h1>To-do list</h1>
             </div>
             <div class="col-md-4 text-end">
-                <a href="/todo/create" type="button" class="btn btn-primary">New to-do</a>
+                <a href="/todos/create" type="button" class="btn btn-primary">New to-do</a>
                 <a onclick="return confirm('Are you sure you want to sign out?')" href="/logout" type="button" class="btn btn-danger">Sign Out</a>
             </div>
         </div>
@@ -59,9 +59,9 @@
                             <td>{{ $todo->todo }}</td>
                             <td>{{ $todo->completed ? 'Yes' : 'No' }}</td>
                             <td>
-                                <a class="btn py-0" href="/todo/{{ $todo->id }}"><i class="fas fa-search"></i></a>
-                                <a class="btn py-0" href="/todo/{{ $todo->id }}/edit"><i class="far fa-edit"></i></a>
-                                <form class="d-inline" method="POST" action="/todo/{{ $todo->id }}" onsubmit="return confirm('Are you sure you want to delete this to-do?')">
+                                <a class="btn py-0" href="/todos/{{ $todo->id }}"><i class="fas fa-search"></i></a>
+                                <a class="btn py-0" href="/todos/{{ $todo->id }}/edit"><i class="far fa-edit"></i></a>
+                                <form class="d-inline" method="POST" action="/todos/{{ $todo->id }}" onsubmit="return confirm('Are you sure you want to delete this to-do?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn py-0"><i class="far fa-trash-alt"></i></button>

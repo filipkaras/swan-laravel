@@ -8,7 +8,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6">
-                <form action="/todo/{{ $todo->id }}" method="post" id="frm-todo" class="m-form m-form--fit m-form--label-align-right">
+                <form action="/todos/{{ $todo->id }}" method="post" id="frm-todo" class="m-form m-form--fit m-form--label-align-right">
                     @csrf
                     @method('PATCH')
                     <div class="m-portlet__body">
