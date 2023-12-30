@@ -1,6 +1,5 @@
 <x-layout>
     <div class="container">
-        <x-result></x-result>
         <div class="row mt-4">
             <div class="col-md-8">
                 <h1>To-do list</h1>
