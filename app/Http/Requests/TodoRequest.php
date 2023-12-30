@@ -26,7 +26,7 @@ class TodoRequest extends FormRequest
     {
         return [
             'user_id' => [Rule::exists('users', 'id')],
-            'todo' => ['required']
+            'todo' => ['required', 'min:3']
         ];
     }
 }
