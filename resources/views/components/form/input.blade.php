@@ -4,7 +4,6 @@
     <x-form.label name="{{ $name }}"/>
 
     <input
-        type="text"
         name="{{ $name }}"
         id="{{ $name }}"
         class="form-control"

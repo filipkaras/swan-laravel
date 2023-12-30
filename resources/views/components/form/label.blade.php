@@ -1,3 +1,3 @@
 @props(['name'])
 
-<label for="{{ $name }}">{{ ucwords($name) }}</label>
+<label class="form-label" for="{{ $name }}">{{ ucwords(str_replace('_', ' ', $name)) }}</label>
