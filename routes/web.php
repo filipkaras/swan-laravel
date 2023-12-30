@@ -32,7 +32,7 @@ Route::middleware('guest')->group(function () {
 Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
 
 // Todos
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'todo.own'])->group(function () {
     Route::resource('todos', TodoController::class);
 });
 
