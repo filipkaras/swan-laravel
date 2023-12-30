@@ -13,7 +13,12 @@ class Todo extends Model
     use Sortable;
     use Filterable;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id',
+        'todo',
+        'description',
+        'completed',
+    ];
 
     public function user()
     {
